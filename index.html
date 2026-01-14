@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- Primary Meta Tags -->
-    <title>Bohl Squared Massage & Nails Lounge | Luxury Spa & Beauty Salon in Springs, Gauteng</title>
+    <title>Bohl Squared Massage & Nails Lounge | Luxury Spa in Springs, Gauteng</title>
     <meta name="description" content="Premier luxury massage, nail spa & beauty treatments in Springs. Experience therapeutic massages, luxury manicures, pedicures, facials, and professional beauty training. Book your pampering session today.">
     <meta name="keywords" content="massage Springs, nail salon Springs, beauty spa Gauteng, deep tissue massage, luxury manicure, pedicure, facial treatment, couples massage, beauty training Springs, spa near me">
     <meta name="author" content="Bohl Squared Massage & Nails Lounge">
@@ -112,6 +112,7 @@
             font-family: var(--poppins);
             color: #333;
             line-height: 1.7;
+            overflow-x: hidden;
         }
         
         h1, h2, h3, h4, h5, h6 {
@@ -153,6 +154,8 @@
             text-transform: uppercase;
             transition: all 0.3s ease;
             border: none;
+            padding: 12px 30px;
+            font-size: 16px;
         }
         
         .btn-primary {
@@ -194,6 +197,15 @@
         .whatsapp-float {
             background: linear-gradient(135deg, #25d366, #128C7E);
             box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            width: 50px;
+            height: 50px;
+            bottom: 20px;
+            right: 20px;
+        }
+        
+        .whatsapp-float img {
+            width: 28px;
+            height: 28px;
         }
         
         /* Statistics Counter */
@@ -208,6 +220,7 @@
             font-family: var(--montserrat);
             font-weight: 600;
             transition: color 0.3s ease;
+            font-size: 1.2rem;
         }
         
         .blog-info h4:hover {
@@ -220,6 +233,7 @@
             font-family: var(--poppins);
             border: 1px solid #ddd;
             padding: 12px 15px;
+            font-size: 16px;
         }
         
         input[type="text"]:focus, 
@@ -241,13 +255,203 @@
             transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
         
+        /* Hero Banner Mobile Fix */
+        .banner-info-bg h4 {
+            font-size: 1.5rem !important;
+            margin-bottom: 10px;
+        }
+        
+        .banner-info-bg h5 {
+            font-size: 1.2rem !important;
+            margin-bottom: 20px;
+        }
+        
         /* Mobile Optimization */
         @media (max-width: 768px) {
-            h1, h2, h3 {
-                font-size: 1.8rem;
+            /* Header and Logo Fix */
+            .navbar-brand {
+                font-size: 1.2rem !important;
+                white-space: normal;
+                line-height: 1.3;
             }
+            
+            h1 {
+                font-size: 1.5rem !important;
+            }
+            
+            h2, .hny-title {
+                font-size: 1.8rem !important;
+            }
+            
+            h3 {
+                font-size: 1.5rem !important;
+            }
+            
+            h4 {
+                font-size: 1.3rem !important;
+            }
+            
             .sub-title {
                 font-size: 0.9rem;
+                letter-spacing: 1px;
+            }
+            
+            /* Hero Section */
+            .banner-info-bg h4 {
+                font-size: 1.3rem !important;
+            }
+            
+            .banner-info-bg h5 {
+                font-size: 1rem !important;
+            }
+            
+            .banner-buttons .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            /* About Section */
+            .bottomhny-gd-ingf h3 {
+                font-size: 1.6rem !important;
+            }
+            
+            .bottomhny-gd-ingf p {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+            
+            /* Feature Cards */
+            .area-box {
+                padding: 20px 15px;
+                margin-bottom: 15px;
+            }
+            
+            .area-box h4 {
+                font-size: 1.2rem !important;
+            }
+            
+            /* Statistics */
+            .counter_grid .counter {
+                font-size: 2.5rem;
+            }
+            
+            .counter_grid h4 {
+                font-size: 1rem;
+            }
+            
+            /* Blog Cards */
+            .grids5-info {
+                margin-bottom: 25px;
+            }
+            
+            .blog-info h4 {
+                font-size: 1.1rem;
+            }
+            
+            /* Testimonials */
+            .slider-info .message {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            
+            /* Footer */
+            .sub-columns > div {
+                margin-bottom: 30px;
+            }
+            
+            .footer-img-grids {
+                text-align: center;
+            }
+            
+            .gd-img-ft {
+                width: 60px;
+                height: 60px;
+                margin: 3px;
+                display: inline-block;
+            }
+            
+            /* Button Sizes */
+            .btn-style {
+                padding: 10px 25px;
+                font-size: 14px;
+            }
+            
+            /* Image Grid Fix */
+            .img-one img {
+                height: 300px;
+                object-fit: cover;
+            }
+            
+            .content-mid {
+                padding: 30px 15px !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            /* Extra Small Devices */
+            .navbar-brand {
+                font-size: 1rem !important;
+            }
+            
+            h2, .hny-title {
+                font-size: 1.5rem !important;
+            }
+            
+            h3 {
+                font-size: 1.3rem !important;
+            }
+            
+            .banner-info-bg h4 {
+                font-size: 1.1rem !important;
+            }
+            
+            .banner-info-bg h5 {
+                font-size: 0.9rem !important;
+            }
+            
+            .btn-style {
+                padding: 8px 20px;
+                font-size: 13px;
+            }
+            
+            .whatsapp-float {
+                width: 45px;
+                height: 45px;
+                bottom: 15px;
+                right: 15px;
+            }
+            
+            .whatsapp-float img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+        
+        /* Fix for large logo text */
+        @media (max-width: 991px) {
+            .navbar-brand {
+                max-width: 200px;
+            }
+        }
+        
+        /* Better spacing on mobile */
+        @media (max-width: 768px) {
+            .py-5 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            .py-lg-5 {
+                padding-top: 2.5rem !important;
+                padding-bottom: 2.5rem !important;
+            }
+            
+            .mt-lg-5 {
+                margin-top: 2rem !important;
+            }
+            
+            .mb-lg-5 {
+                margin-bottom: 2rem !important;
             }
         }
     </style>
@@ -255,7 +459,7 @@
 
 <body>
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/27769791311" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp!">
+    <a href="https://wa.me/27769791311" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
         <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp" width="60" height="60">
     </a>
     <style>
@@ -285,24 +489,49 @@
             width: 35px;
             height: 35px;
         }
+        
+        /* Mobile WhatsApp Button */
+        @media (max-width: 768px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+            }
+            .whatsapp-float img {
+                width: 28px;
+                height: 28px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                width: 45px;
+                height: 45px;
+                bottom: 15px;
+                right: 15px;
+            }
+            .whatsapp-float img {
+                width: 25px;
+                height: 25px;
+            }
+        }
     </style>
 	<!--header-->
 	<header id="site-header" class="fixed-top">
 		<div class="container-fluid">
 			<nav class="navbar navbar-expand-lg navbar-dark stroke">
-				<h1> <a class="navbar-brand" href="index.html">
-						<span class="sub-logo">B</span>ohl <span class="sub-logo">S</span>quared Massage & Nails
-					</a></h1>
-				<!-- if logo is image enable this   
-        <a class="navbar-brand" href="#index.html">
-            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-        </a> -->
-				<button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+				<h1> 
+					<a class="navbar-brand" href="index.html">
+						<span class="sub-logo">B</span>ohl <span class="sub-logo">S</span>quared<br>
+						<small style="font-size: 14px; font-weight: 400;">Massage & Nails Lounge</small>
+					</a>
+				</h1>
+				<button class="navbar-toggler collapsed bg-gradient" type="button" data-toggle="collapse"
 					data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
 					aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
 					<span class="navbar-toggler-icon fa icon-close fa-times"></span>
-					</span>
 				</button>
 
 				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -316,7 +545,6 @@
 						<li class="nav-item">
 							<a class="nav-link" href="services.html">Services</a>
 						</li>
-						
 						<li class="nav-item">
 							<a class="nav-link" href="contact.html">Contact</a>
 						</li>
@@ -337,7 +565,6 @@
 										required="required" autofocus="">
 									<button type="submit" class="btn">Search</button>
 								</form>
-
 							</div>
 							<a class="close" href="#close">×</a>
 						</div>
@@ -349,8 +576,6 @@
 								<div></div>
 							</div>
 						</a>
-
-						<!--//search-right-->
 					</div>
 				</div>
 			</nav>
@@ -363,7 +588,6 @@
 	<div class="modal right fade" id="DomainModal" tabindex="-1" role="dialog" aria-labelledby="DomainModalLabel2">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
-
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
 						aria-hidden="true">&times;</span></button>
 
@@ -372,10 +596,6 @@
 						<h2 class="logo"><a class="logo-brand" href="index.html">
 								<span class="sub-logo">B</span>ohl <span class="sub-logo">S</span>quared
 							</a></h2>
-						<!-- if logo is image enable this   
-			<h2 class="logo">
-			  <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-			</h2> -->
 						<p class="mt-md-3 mt-2">Indulge in our rejuvenating treatments, designed to relax your mind and refresh your body.</p>
 						<div class="widget-menu-items mt-sm-5 mt-4">
 							<h5 class="widget-title">Menu Items</h5>
@@ -390,7 +610,6 @@
 									<li class="nav-item">
 										<a class="nav-link" href="services.html">Services</a>
 									</li>
-
 									<li class="nav-item">
 										<a class="nav-link" href="contact.html">Contact</a>
 									</li>
@@ -401,32 +620,25 @@
 							<h5 class="widget-title">Contact Us</h5>
 							<ul class="icon-rounded address">
 								<li>
-									<p> 28 Heron Cres, Struisbult, <br>Springs, 1559, Gauteng</p>
+									<p>28 Heron Cres, Struisbult<br>Springs, 1559, Gauteng</p>
 								</li>
 								<li class="mt-3">
-									<p><span class="fa fa-phone"></span> <a
-											href="tel:+27769791311">+27769791311</a></p>
+									<p><span class="fa fa-phone"></span> <a href="tel:+27769791311">+27769791311</a></p>
 								</li>
 								<li class="mt-2">
-									<p><span class="fa fa-envelope"></span> <a
-											href="mailto:medpillhospital@mail.com">bohl2nails@gmail.com</a></p>
+									<p><span class="fa fa-envelope"></span> <a href="mailto:bohl2nails@gmail.com">bohl2nails@gmail.com</a></p>
 								</li>
 								<li class="top_li1 mt-2">
-									<p><span class="fa fa-clock-o"></span> <a href="mailto:medpillhospital@mail.com">Mon
-											- Sun 09:00 - 18:00
-										</a></p>
+									<p><span class="fa fa-clock-o"></span> Mon - Sun 09:00 - 18:00</p>
 								</li>
 							</ul>
 						</div>
 						<div class="widget-social-icons mt-sm-5 mt-4">
 							<h5 class="widget-title">Follow Us</h5>
 							<ul class="icon-rounded">
-								<li><a class="social-link twitter" href="#url" target="_blank"><i
-											class="fa fa-twitter"></i></a></li>
-								<li><a class="social-link linkedin" href="#url" target="_blank"><i
-											class="fa fa-linkedin"></i></a></li>
-								<li><a class="social-link tumblr" href="#url" target="_blank"><i
-											class="fa fa-tumblr"></i></a></li>
+								<li><a class="social-link twitter" href="#url" target="_blank"><i class="fa fa-twitter"></i></a></li>
+								<li><a class="social-link linkedin" href="#url" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+								<li><a class="social-link tumblr" href="#url" target="_blank"><i class="fa fa-tumblr"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -437,6 +649,7 @@
 		<!-- //modal-dialog -->
 	</div>
 	<!-- //Domain modal -->
+	
 	<!-- main-slider -->
 	<section class="w3l-main-slider position-relative" id="home">
 		<div class="companies20-content">
@@ -518,14 +731,11 @@
 					<div class="scroll-arrow"></div>
 					<div class="scroll-arrow"></div>
 				</a>
-
 			</div>
-
 		</div>
-
 	</section>
 	<!-- //banner-slider-->
-	<!-- main-slider -->
+	
 	<!-- //bottom-grids -->
 	<div class="w3l-bottom-grids py-5" id="about">
 		<div class="container py-lg-5">
@@ -544,6 +754,7 @@
 		</div>
 	</div>
 	<!-- //bottom-grids -->
+	
 	<!--/features-grids-6-->
 	<section class="features-grids-6">
 		<div class="container">
@@ -575,11 +786,11 @@
 						<p>Enhance your mood and alleviate stress with our custom aroma therapy sessions. We use essential oils to create a sensory experience that soothes the mind.</p>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</section>
 	<!--//features-grids-6-->
+	
 	<!-- /specification-6-->
 	<section class="w3l-specification-6">
 		<div class="specification-6-mian py-5">
@@ -592,7 +803,6 @@
 									<div class="icon_info">
 										<p class="counter">1500</p>
 										<h4>Massage Sessions</h4>
-
 									</div>
 								</div>
 							</div>
@@ -601,7 +811,6 @@
 									<div class="icon_info">
 										<p class="counter">320</p>
 										<h4>Pampered Clients</h4>
-
 									</div>
 								</div>
 							</div>
@@ -610,7 +819,6 @@
 									<div class="icon_info">
 										<p class="counter">98</p>
 										<h4>5-Star Reviews</h4>
-
 									</div>
 								</div>
 							</div>
@@ -619,51 +827,38 @@
 									<div class="icon_info">
 										<p class="counter">5</p>
 										<h4>Years in Springs</h4>
-
 									</div>
 								</div>
 							</div>
 						</div>
-
 					</div>
-
 				</div>
 			</div>
 		</div>
 	</section>
 	<!-- //specification-6-->
+	
 	<!-- /w3l-content-with-photo-4-->
 	<section class="w3l-content-with-photo-4">
-		<!-- /content-grids-->
 		<div class="content-photo-info py-5">
 			<div class="container py-lg-5">
-				<!-- /row-->
 				<div class="content-photo-grids">
 					<div class="photo-6-inf-right">
 						<h6 class="sub-title">Health & Relaxation</h6>
-						<h3 class="hny-title">
-							Our Wellness Philosophy
-						</h3>
+						<h3 class="hny-title">Our Wellness Philosophy</h3>
 						<p class="mt-3">At <strong>Bohl Squared</strong>, we believe true beauty stems from inner peace and well-being. Our philosophy integrates skilled therapeutic techniques with a nurturing environment. We are dedicated to providing more than just a service; we offer a sanctuary in Springs where every treatment—from our signature nail art to our stress-relieving massages—is tailored to help you disconnect, recharge, and leave feeling truly transformed.</p>
 						<div class="servehny-1">
 							<div class="ser-sub">
-
-								<a href="#link" class="ser1"><span class="fa fa-check"></span> Hydrating Facials
-								</a>
-								<a href="#link" class="ser1"><span class="fa fa-check"></span> Body Scrubs & Wraps
-								</a>
+								<a href="#link" class="ser1"><span class="fa fa-check"></span> Hydrating Facials</a>
+								<a href="#link" class="ser1"><span class="fa fa-check"></span> Body Scrubs & Wraps</a>
 								<a href="#link" class="ser1"><span class="fa fa-check"></span> Professional Waxing</a>
 								<a href="#link" class="ser1"><span class="fa fa-check"></span> Couples Massage</a>
 							</div>
 							<div class="ser-sub">
-								<a href="#link" class="ser1"><span class="fa fa-check"></span> Gel & Acrylic Nails
-								</a>
+								<a href="#link" class="ser1"><span class="fa fa-check"></span> Gel & Acrylic Nails</a>
 								<a href="#link" class="ser1"><span class="fa fa-check"></span> Medical Pedicures</a>
-
-								<a href="#link" class="ser1"><span class="fa fa-check"></span>
-									Hot Stone Therapy</a>
-								<a href="#link" class="ser1"><span class="fa fa-check"></span>
-									Reflexology</a>
+								<a href="#link" class="ser1"><span class="fa fa-check"></span> Hot Stone Therapy</a>
+								<a href="#link" class="ser1"><span class="fa fa-check"></span> Reflexology</a>
 							</div>
 						</div>
 						<div class="read-buttons">
@@ -671,13 +866,12 @@
 							<a class="btn btn-style btn-primary" href="contact.html">Contact Us Today</a>
 						</div>
 					</div>
-
 				</div>
-				<!-- //row-->
 			</div>
 		</div>
 	</section>
 	<!-- /w3l-content-with-photo-4-->
+	
 	<!-- /w3l-content-grids-->
 	<section class="w3l-index2">
 		<div class="row abouthy-img-grids no-gutters">
@@ -686,9 +880,7 @@
 			</div>
 			<div class="col-md-6 img-one content-mid py-md-0 py-5">
 				<div class="info">
-					<h3 class="hny-title two">
-						Luxury Manicure Services
-					</h3>
+					<h3 class="hny-title two">Luxury Manicure Services</h3>
 					<p class="mt-3 mb-5 pr-lg-4">Treat your hands to the best nail care in Gauteng. Our manicures are more than just polish; they are a complete grooming experience. We specialize in long-lasting gel polish, nail strengthening treatments, and elegant nail art. Using only high-quality, safe products, our technicians ensure your nails are not only beautiful but also healthy. Perfect for a pre-event treat or regular self-care.</p>
 					<div class="ready-more">
 						<a class="btn btn-style btn-primary" href="services.html">View Nail Services</a>
@@ -697,9 +889,7 @@
 			</div>
 			<div class="col-md-6 img-info content-mid py-md-0 py-5">
 				<div class="info">
-					<h3 class="hny-title two">
-						Expert Beauty Training
-					</h3>
+					<h3 class="hny-title two">Expert Beauty Training</h3>
 					<p class="mt-3 mb-5 pr-lg-4">Passionate about beauty? Elevate your career with our accredited training programs in Springs. We offer hands-on courses in nail technology, massage therapy, and spa treatments taught by industry professionals. Whether you're starting out or upgrading your skills, our training provides the practical knowledge and confidence to excel in South Africa's thriving beauty industry.</p>
 					<div class="ready-more">
 						<a class="btn btn-style btn-primary" href="services.html">Learn About Training</a>
@@ -712,6 +902,7 @@
 		</div>
 	</section>
 	<!-- /w3l-content-grids-->
+	
 	<!--//news-grids-->
 	<section class="w3l-news-sec">
 		<div class="news-mainhny py-5">
@@ -719,7 +910,6 @@
 				<div class="title-content text-center mb-lg-5 mb-4">
 					<h6 class="sub-title">Glimpse of Luxury</h6>
 					<h3 class="hny-title">Our Beauty & Spa Gallery</h3>
-
 				</div>
 			</div>
 			<div class="owl-news owl-carousel owl-theme">
@@ -727,9 +917,7 @@
 					<div class="news-img position-relative">
 						<a href="#"><img src="assets/images/ab.jpg" class="img-fluid" alt="Gel nail art and manicure in Springs"></a>
 						<div class="title-wrap">
-							<a href="#">
-								<h4 class="title">Luxury Manicures</h4>
-							</a>
+							<a href="#"><h4 class="title">Luxury Manicures</h4></a>
 							<a href="#" class="text-right"><span class="fa fa-arrow-right"></span></a>
 						</div>
 					</div>
@@ -738,9 +926,7 @@
 					<div class="news-img">
 						<a href="#"><img src="assets/images/ab1.jpg" class="img-fluid" alt="Beauty therapy training session"></a>
 						<div class="title-wrap">
-							<a href="#">
-								<h4 class="title">Professional Training</h4>
-							</a>
+							<a href="#"><h4 class="title">Professional Training</h4></a>
 							<a href="#" class="text-right"><span class="fa fa-arrow-right"></span></a>
 						</div>
 					</div>
@@ -749,9 +935,7 @@
 					<div class="news-img">
 						<a href="#"><img src="assets/images/ab2.jpg" class="img-fluid" alt="Relaxing spa pedicure treatment"></a>
 						<div class="title-wrap">
-							<a href="#">
-								<h4 class="title">Spa Pedicures</h4>
-							</a>
+							<a href="#"><h4 class="title">Spa Pedicures</h4></a>
 							<a href="#" class="text-right"><span class="fa fa-arrow-right"></span></a>
 						</div>
 					</div>
@@ -760,9 +944,7 @@
 					<div class="news-img">
 						<a href="#"><img src="assets/images/ab3.jpg" class="img-fluid" alt="Facial and skincare treatment"></a>
 						<div class="title-wrap">
-							<a href="#">
-								<h4 class="title">Revitalizing Facials</h4>
-							</a>
+							<a href="#"><h4 class="title">Revitalizing Facials</h4></a>
 							<a href="#" class="text-right"><span class="fa fa-arrow-right"></span></a>
 						</div>
 					</div>
@@ -771,20 +953,16 @@
 					<div class="news-img">
 						<a href="#"><img src="assets/images/ab5.jpg" class="img-fluid" alt="Refreshments at our Springs lounge"></a>
 						<div class="title-wrap">
-							<a href="#">
-								<h4 class="title">Client Refreshments</h4>
-							</a>
+							<a href="#"><h4 class="title">Client Refreshments</h4></a>
 							<a href="#" class="text-right"><span class="fa fa-arrow-right"></span></a>
 						</div>
 					</div>
-					</div>
+				</div>
 				<div class="item">
 					<div class="news-img">
 						<a href="#"><img src="assets/images/ab4.jpg" class="img-fluid" alt="Kids beauty and pampering party"></a>
 						<div class="title-wrap">
-							<a href="#">
-								<h4 class="title">Kids Pamper Parties</h4>
-							</a>
+							<a href="#"><h4 class="title">Kids Pamper Parties</h4></a>
 							<a href="#" class="text-right"><span class="fa fa-arrow-right"></span></a>
 						</div>
 					</div>
@@ -793,6 +971,7 @@
 		</div>
 	</section>
 	<!--//news-grids-->
+	
 	<!-- /blog-Section -->
 	<section class="w3l-blogluxe-hny" id="news">
 		<section id="grids5-block" class="py-5">
@@ -800,58 +979,42 @@
 				<div class="header-section text-center mx-auto">
 					<h6 class="sub-title">Beauty & Wellness Insights</h6>
 					<h3 class="hny-title">Latest From Our Blog</h3>
-
 				</div>
 				<div class="grid-view">
 					<div class="row">
 						<div class="col-lg-4 col-md-6 mt-5">
 							<div class="grids5-info">
 								<a href="blog-single.html" class="d-block zoom">
-									<img src="assets/images/ab4.jpg" alt="Kids enjoying a fun pamper party" class="img-fluid news-image" />
-
-
+									<img src="assets/images/ab4.jpg" alt="Kids enjoying a fun pamper party" class="img-fluid news-image">
 								</a>
 								<div class="blog-info">
 									<p class="date">14 Jan, 2026</p>
-									<a href="blog-single.html">
-										<h4>Fun & Safe Pamper Parties for Kids in Gauteng</h4>
-									</a>
+									<a href="blog-single.html"><h4>Fun & Safe Pamper Parties for Kids in Gauteng</h4></a>
 									<p class="blog-text">Looking for a unique birthday party idea in Springs? Discover how our kids' pamper parties offer fun, gentle nail painting, mini facials, and creative activities in a safe, supervised environment. Perfect for creating unforgettable memories.</p>
-
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-6 mt-5">
 							<div class="grids5-info">
 								<a href="blog-single.html" class="d-block zoom">
-									<img src="assets/images/ab5.jpg" alt="Healthy refreshments and snacks" class="img-fluid news-image" />
-
-
+									<img src="assets/images/ab5.jpg" alt="Healthy refreshments and snacks" class="img-fluid news-image">
 								</a>
 								<div class="blog-info">
 									<p class="date">10 Jan, 2026</p>
-									<a href="blog-single.html">
-										<h4>5 Benefits of Couples Massage for Stress Relief</h4>
-									</a>
+									<a href="blog-single.html"><h4>5 Benefits of Couples Massage for Stress Relief</h4></a>
 									<p class="blog-text">Strengthen your bond and melt away shared stress. We explore the top benefits of couples massage, from improved communication to synchronized relaxation, and why it's the perfect gift experience in Springs for any occasion.</p>
-
 								</div>
 							</div>
 						</div>
 						<div class="col-lg-4 offset-md-3 offset-lg-0 col-md-6 mt-5">
 							<div class="grids5-info">
 								<a href="blog-single.html" class="d-block zoom">
-									<img src="assets/images/ab6.jpg" alt="Natural cosmetic products on display" class="img-fluid news-image" />
-
-
+									<img src="assets/images/ab6.jpg" alt="Natural cosmetic products on display" class="img-fluid news-image">
 								</a>
 								<div class="blog-info">
 									<p class="date">5 Jan 2026</p>
-									<a href="blog-single.html">
-										<h4>Why Natural Skincare is Essential for Your Facial</h4>
-									</a>
+									<a href="blog-single.html"><h4>Why Natural Skincare is Essential for Your Facial</h4></a>
 									<p class="blog-text">Your skin deserves the best. Dive into the reasons why choosing natural and organic products for your facial in Gauteng leads to better long-term skin health, fewer irritations, and stunning, glowing results without harsh chemicals.</p>
-
 								</div>
 							</div>
 						</div>
@@ -861,18 +1024,16 @@
 		</section>
 	</section>
 	<!-- //blog-Section -->
+	
 	<!-- /w3l-newsletter-->
 	<section class="w3l-newsletter">
-		<!-- /form-25-section -->
 		<div class="form-25-main py-5">
 			<div class="container py-lg-5">
 				<div class="forms-25-info">
 					<div class="title-content text-center">
 						<h6 class="sub-title">Stay Updated</h6>
 						<h3 class="hny-title two">Subscribe for Spa Tips & Exclusive Offers</h3>
-
 					</div>
-
 					<form action="#" method="post" class="signin-form mt-4 mb-2">
 						<div class="forms-gds">
 							<input type="text" name="" placeholder="Your Name" required />
@@ -885,6 +1046,7 @@
 		</div>
 	</section>
 	<!-- //w3l-newsletter-->
+	
 	<!--/testimonials-->
 	<section class="w3l-testimonials">
 		<div class="testimonials py-5">
@@ -892,7 +1054,6 @@
 				<div class="title-content text-center mb-lg-5 mb-4">
 					<h6 class="sub-title">Client Love</h6>
 					<h3 class="hny-title">What Our Clients in Gauteng Say</h3>
-
 				</div>
 				<div class="row">
 					<div class="col-lg-10 mx-auto">
@@ -904,7 +1065,6 @@
 									</div>
 									<div class="message"><span class="fa fa-quote-left" aria-hidden="true"></span> "Completing my beauty therapy training at Bohl Squared was the best decision. The practical, hands-on approach gave me the confidence to start my own business. Highly recommended for anyone in Springs looking to break into the industry!"</div>
 									<div class="name">- Sisipho Mlambo, <em>Graduate & Entrepreneur</em></div>
-
 								</div>
 							</div>
 							<div class="item">
@@ -943,23 +1103,13 @@
 							<div class="row sub-columns">
 								<div class="col-lg-4 col-md-6 sub-one-left pr-lg-4">
 									<h3 class="hny-title two mb-3">About Our Springs Spa</h3>
-									<!-- if logo is image enable this   
-										<a class="navbar-brand" href="#index.html">
-											<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-										</a> -->
 									<p class="pr-lg-5"><strong>Bohl Squared Massage and Nails Lounge</strong> is your premier destination for beauty and relaxation in Springs, Gauteng. We specialize in therapeutic massage, luxury nail care, and professional beauty training.</p>
 									<div class="columns-2">
 										<ul class="social">
 											<li><a href="https://www.facebook.com/Bohl2lounge" target="_blank" rel="noopener noreferrer"><span class="fa fa-facebook" aria-hidden="true"></span></a></li>
 											<li><a href="https://wa.me/27769791311" target="_blank" rel="noopener noreferrer"><span class="fa fa-whatsapp" aria-hidden="true"></span></a></li>
-											<li>
-                                             <a href="https://www.instagram.com/bohl2nails_massage?igsh=MWt4ODI2bTYzMDdrYw==" target="_blank" rel="noopener noreferrer">
-                                            <span class="fa fa-instagram" aria-hidden="true"></span>
-                                           </a>
-                                        </li>
-										<li><a href="mailto:bohl2nails@gmail.com"><span class="fa fa-envelope"
-														aria-hidden="true"></span></a>
-											</li>
+											<li><a href="https://www.instagram.com/bohl2nails_massage?igsh=MWt4ODI2bTYzMDdrYw==" target="_blank" rel="noopener noreferrer"><span class="fa fa-instagram" aria-hidden="true"></span></a></li>
+											<li><a href="mailto:bohl2nails@gmail.com"><span class="fa fa-envelope" aria-hidden="true"></span></a></li>
 										</ul>
 									</div>
 								</div>
@@ -967,84 +1117,51 @@
 									<div class="sub-two-right">
 										<h6>Quick Links</h6>
 										<ul>
-											<li><a href="index.html"><span
-														class="fa fa-angle-double-right mr-2"></span>Home</a>
-											</li>
-											<li><a href="about.html"><span
-														class="fa fa-angle-double-right mr-2"></span>About Us</a>
-											</li>
-											<li><a href="services.html"><span
-														class="fa fa-angle-double-right mr-2"></span>Services & Prices</a></li>
-											<li><a href="contact.html"><span
-														class="fa fa-angle-double-right mr-2"></span>Contact & Location</a></li>
+											<li><a href="index.html"><span class="fa fa-angle-double-right mr-2"></span>Home</a></li>
+											<li><a href="about.html"><span class="fa fa-angle-double-right mr-2"></span>About Us</a></li>
+											<li><a href="services.html"><span class="fa fa-angle-double-right mr-2"></span>Services & Prices</a></li>
+											<li><a href="contact.html"><span class="fa fa-angle-double-right mr-2"></span>Contact & Location</a></li>
 										</ul>
 									</div>
 									<div class="sub-two-right">
 										<h6>Our Top Therapies</h6>
 										<ul>
-											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Deep Tissue Massage</a>
-											</li>
-											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Luxury Spa Day</a>
-											</li>
-											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Medical Pedicure</a>
-											</li>
-											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Couples Relaxation</a>
-											</li>
+											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Deep Tissue Massage</a></li>
+											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Luxury Spa Day</a></li>
+											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Medical Pedicure</a></li>
+											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Couples Relaxation</a></li>
 										</ul>
 									</div>
 									<div class="sub-two-right">
 										<h6>Beauty Categories</h6>
 										<ul>
 											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Gel & Acrylic Nails</a></li>
-											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Professional Waxing</a>
-											</li>
-											<li><a href="#support"><span class="fa fa-angle-double-right mr-2"></span>Anti-Ageing Facials</a>
-											</li>
-											<li><a href="#terms"><span class="fa fa-angle-double-right mr-2"></span>Body Scrubs & Wraps</a>
-											</li>
+											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Professional Waxing</a></li>
+											<li><a href="#support"><span class="fa fa-angle-double-right mr-2"></span>Anti-Ageing Facials</a></li>
+											<li><a href="#terms"><span class="fa fa-angle-double-right mr-2"></span>Body Scrubs & Wraps</a></li>
 										</ul>
 									</div>
 								</div>
 								<div class="col-lg-3 col-md-6 sub-one-left">
-									<h6><a href="https://www.facebook.com/Bohl2lounge" target="_blank" rel="noopener noreferrer">
-                                    Visit Us on Facebook
-                                </a></h6>
+									<h6><a href="https://www.facebook.com/Bohl2lounge" target="_blank" rel="noopener noreferrer">Visit Us on Facebook</a></h6>
 									<div class="footer-img-grids">
 										<div class="gd-img-ft">
-											<a class="" href="#">
-												<img class="rounded img-fluid img-responsive" src="assets/images/ab.jpg"
-													alt="Manicure image">
-											</a>
+											<a href="#"><img class="rounded img-fluid img-responsive" src="assets/images/ab.jpg" alt="Manicure image"></a>
 										</div>
 										<div class="gd-img-ft">
-											<a class="" href="#">
-												<img class="rounded img-fluid img-responsive"
-													src="assets/images/ab1.jpg" alt="Training image">
-											</a>
+											<a href="#"><img class="rounded img-fluid img-responsive" src="assets/images/ab1.jpg" alt="Training image"></a>
 										</div>
 										<div class="gd-img-ft">
-											<a class="" href="#">
-												<img class="rounded img-fluid img-responsive"
-													src="assets/images/ab2.jpg" alt="Pedicure image">
-											</a>
+											<a href="#"><img class="rounded img-fluid img-responsive" src="assets/images/ab2.jpg" alt="Pedicure image"></a>
 										</div>
 										<div class="gd-img-ft">
-											<a class="" href="#">
-												<img class="rounded img-fluid img-responsive"
-													src="assets/images/ab3.jpg" alt="Facial image">
-											</a>
+											<a href="#"><img class="rounded img-fluid img-responsive" src="assets/images/ab3.jpg" alt="Facial image"></a>
 										</div>
 										<div class="gd-img-ft">
-											<a class="" href="#">
-												<img class="rounded img-fluid img-responsive"
-													src="assets/images/ab4.jpg" alt="Kids party image">
-											</a>
+											<a href="#"><img class="rounded img-fluid img-responsive" src="assets/images/ab4.jpg" alt="Kids party image"></a>
 										</div>
 										<div class="gd-img-ft">
-											<a class="" href="#">
-												<img class="rounded img-fluid img-responsive"
-													src="assets/images/ab5.jpg" alt="Refreshments image">
-											</a>
+											<a href="#"><img class="rounded img-fluid img-responsive" src="assets/images/ab5.jpg" alt="Refreshments image"></a>
 										</div>
 									</div>
 								</div>
@@ -1060,17 +1177,13 @@
 							<p>&copy; 2026 Bohl Squared Massage & Nails Lounge. All rights reserved. | Springs, Gauteng</p>
 						</div>
 						<ul class="columns text-lg-right">
-							<li><a href="#">Privacy Policy</a>
-							</li>
-							<li><a href="about.html">About Us</a>
-							</li>
-							<li><a href="contact.html">Contact Us</a>
-							</li>
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="contact.html">Contact Us</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<!-- copyright -->
 			<!-- move top -->
 			<button onclick="topFunction()" id="movetop" title="Go to top">
 				<span class="fa fa-arrow-up" aria-hidden="true"></span>
@@ -1129,9 +1242,9 @@ $(document).ready(function () {
     });
     
     $('.owl-news').owlCarousel({
-        stagePadding: 50,
+        stagePadding: 20,
         loop: true,
-        margin: 40,
+        margin: 20,
         nav: true,
         responsiveClass: true,
         autoplay: true,
