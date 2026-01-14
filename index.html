@@ -228,21 +228,12 @@
             outline: none;
         }
         
-        /* Performance optimizations for GSAP */
-        .area-box, .grids5-info, .slider-info, .news-img, .counter_grid {
-            will-change: transform, opacity;
-        }
-        
-        .scrollhny-btn, .banner-buttons {
-            will-change: transform;
-        }
-        
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
         }
         
-        /* Enhanced nav-fixed with GSAP */
+        /* Enhanced nav-fixed */
         #site-header.nav-fixed {
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
@@ -1090,16 +1081,13 @@
 
 <!-- JavaScript Libraries -->
 <script src="assets/js/jquery-3.3.1.min.js"></script>
-<!-- GSAP Animation Library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 <!-- stats -->
 <script src="assets/js/jquery.waypoints.min.js"></script>
 <script src="assets/js/jquery.countup.js"></script>
 <script src="assets/js/owl.carousel.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 
-<!-- Main JavaScript with GSAP Animations -->
+<!-- Main JavaScript -->
 <script>
 $(document).ready(function () {
     // Initialize counters
@@ -1190,169 +1178,6 @@ $(document).ready(function () {
             }
         });
     });
-    
-    // GSAP Animations
-    if (typeof gsap !== 'undefined') {
-        gsap.registerPlugin(ScrollTrigger);
-        
-        // 1. Hero Section Animation
-        gsap.from(".banner-info-bg h4, .banner-info-bg h5", {
-            duration: 1.2,
-            y: 50,
-            opacity: 0,
-            stagger: 0.3,
-            ease: "power3.out",
-            delay: 0.5
-        });
-        
-        gsap.from(".banner-buttons", {
-            duration: 1,
-            y: 30,
-            opacity: 0,
-            ease: "power3.out",
-            delay: 1.2
-        });
-        
-        // 2. About Section Animation
-        gsap.from(".bottomhny-gd-ingf", {
-            scrollTrigger: {
-                trigger: ".bottomhny-gd-ingf",
-                start: "top 80%",
-                toggleActions: "play none none none"
-            },
-            duration: 1,
-            y: 40,
-            opacity: 0,
-            ease: "power2.out"
-        });
-        
-        // 3. Feature Cards Animation
-        gsap.from(".grids-feature", {
-            scrollTrigger: {
-                trigger: ".features-grids-6",
-                start: "top 75%",
-                toggleActions: "play none none none"
-            },
-            duration: 0.8,
-            y: 30,
-            opacity: 0,
-            stagger: 0.15,
-            ease: "power2.out"
-        });
-        
-        // 4. Statistics Counter Animation
-        gsap.from(".counter_grid", {
-            scrollTrigger: {
-                trigger: ".specification-6-mian",
-                start: "top 70%",
-                toggleActions: "play none none none"
-            },
-            duration: 1,
-            scale: 0.8,
-            opacity: 0,
-            stagger: 0.2,
-            ease: "back.out(1.2)"
-        });
-        
-        // 5. Service List Animation
-        gsap.from(".servehny-1 .ser1", {
-            scrollTrigger: {
-                trigger: ".servehny-1",
-                start: "top 85%",
-                toggleActions: "play none none none"
-            },
-            duration: 0.6,
-            x: -20,
-            opacity: 0,
-            stagger: 0.1,
-            ease: "power2.out"
-        });
-        
-        // 6. Image Grid Animation
-        gsap.from(".img-one, .content-mid", {
-            scrollTrigger: {
-                trigger: ".w3l-index2",
-                start: "top 70%",
-                toggleActions: "play none none none"
-            },
-            duration: 1,
-            y: 40,
-            opacity: 0,
-            stagger: 0.2,
-            ease: "power2.out"
-        });
-        
-        // 7. Gallery Items Animation
-        gsap.from(".news-img", {
-            scrollTrigger: {
-                trigger: ".owl-news",
-                start: "top 70%",
-                toggleActions: "play none none none"
-            },
-            duration: 0.8,
-            y: 30,
-            opacity: 0,
-            stagger: 0.1,
-            ease: "power2.out"
-        });
-        
-        // 8. Blog Cards Animation
-        gsap.from(".grids5-info", {
-            scrollTrigger: {
-                trigger: ".grid-view",
-                start: "top 75%",
-                toggleActions: "play none none none"
-            },
-            duration: 0.8,
-            y: 40,
-            opacity: 0,
-            stagger: 0.15,
-            ease: "power2.out"
-        });
-        
-        // 9. Testimonial Cards Animation
-        gsap.from(".slider-info", {
-            scrollTrigger: {
-                trigger: ".w3l-testimonials",
-                start: "top 70%",
-                toggleActions: "play none none none"
-            },
-            duration: 1,
-            x: -30,
-            opacity: 0,
-            ease: "power2.out"
-        });
-        
-        // 10. Hover Effects for Feature Cards
-        document.querySelectorAll('.area-box').forEach((box, index) => {
-            box.addEventListener('mouseenter', () => {
-                gsap.to(box, {
-                    duration: 0.3,
-                    y: -8,
-                    boxShadow: "0 15px 30px rgba(138, 115, 82, 0.15)",
-                    ease: "power2.out"
-                });
-            });
-            
-            box.addEventListener('mouseleave', () => {
-                gsap.to(box, {
-                    duration: 0.3,
-                    y: 0,
-                    boxShadow: "none",
-                    ease: "power2.out"
-                });
-            });
-        });
-        
-        // 11. Floating WhatsApp Button
-        gsap.to(".whatsapp-float", {
-            duration: 2,
-            y: -8,
-            repeat: -1,
-            yoyo: true,
-            ease: "sine.inOut"
-        });
-    }
 });
 
 // Move to top functionality
