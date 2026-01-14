@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en-ZA">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -82,6 +81,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         /* Luxury Typography System */
         :root {
@@ -94,23 +96,42 @@
             --light-bg: #f9f6f1;
         }
         
+        /* Base Typography */
         body {
-            font-family: var(--poppins);
+            font-family: var(--poppins) !important;
             color: #333;
             line-height: 1.7;
+            font-size: 16px;
         }
         
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--montserrat);
+        h1, h2, h3, h4, h5, h6,
+        .hny-title,
+        .navbar-brand,
+        .logo,
+        .title-sub,
+        .cause-title,
+        .progress-tittle,
+        .pricing-val,
+        .footer-inner-main h3,
+        .footer-inner-main h6,
+        .widget-title {
+            font-family: var(--montserrat) !important;
+        }
+        
+        /* Luxury headings */
+        .luxury-heading {
+            font-family: var(--playfair) !important;
             font-weight: 600;
-            color: var(--secondary-color);
             letter-spacing: -0.5px;
         }
         
-        .hny-title {
-            font-family: var(--montserrat) !important;
-            font-weight: 700;
-            color: var(--secondary-color);
+        .navbar-brand {
+            font-weight: 700 !important;
+        }
+        
+        .sub-logo {
+            color: var(--primary-color);
+            font-weight: 800;
         }
         
         .sub-title {
@@ -121,17 +142,7 @@
             color: var(--primary-color);
         }
         
-        .navbar-brand {
-            font-family: var(--montserrat) !important;
-            font-weight: 700;
-        }
-        
-        .sub-logo {
-            color: var(--primary-color);
-            font-weight: 800;
-        }
-        
-        /* Luxury Button Styling */
+        /* Button Styling */
         .btn-style {
             font-family: var(--montserrat);
             font-weight: 500;
@@ -139,6 +150,8 @@
             text-transform: uppercase;
             transition: all 0.3s ease;
             border: none;
+            padding: 12px 28px;
+            border-radius: 4px;
         }
         
         .btn-primary {
@@ -163,10 +176,13 @@
             border-radius: 10px;
             box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         
         .w3l-pricing-7.active {
-            transform: scale(1.05);
+            transform: scale(1.03);
             box-shadow: 0 15px 40px rgba(138, 115, 82, 0.15);
         }
         
@@ -182,6 +198,9 @@
             overflow: hidden;
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
         }
         
         .luxe-grid-info:hover {
@@ -203,33 +222,201 @@
         .footer-inner-main h3, 
         .footer-inner-main h6 {
             color: #fff;
-            font-family: var(--montserrat);
         }
         
         /* Pricing Value Styling */
         .pricing-val {
-            font-family: var(--montserrat);
             font-weight: 500;
             color: var(--secondary-color);
         }
         
         .title-sub {
-            font-family: var(--montserrat);
             font-weight: 700;
             color: var(--primary-color);
         }
         
         /* Mobile Optimization */
         @media (max-width: 768px) {
-            h1, h2, h3 {
-                font-size: 1.8rem;
+            h1, .hny-title {
+                font-size: 1.8rem !important;
+                line-height: 1.3;
             }
+            
+            h2 {
+                font-size: 1.6rem !important;
+            }
+            
+            h3 {
+                font-size: 1.4rem !important;
+            }
+            
             .sub-title {
+                font-size: 0.85rem;
+            }
+            
+            body, p, li {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+            
+            .navbar-brand {
+                font-size: 1rem;
+            }
+            
+            .btn-style {
+                padding: 10px 20px;
                 font-size: 0.9rem;
             }
+            
             .w3l-pricing-7.active {
-                transform: scale(1.02);
+                transform: scale(1.01);
             }
+            
+            .w3l-pricing-7, .luxe-grid-info {
+                margin-bottom: 20px;
+            }
+            
+            /* Content sections */
+            .content-left, .content-right {
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+            }
+            
+            .content-mid .info {
+                padding: 30px 20px !important;
+            }
+            
+            .w3l-pricing-7-top h6 {
+                font-size: 1.1rem;
+            }
+            
+            .title-sub {
+                font-size: 1.4rem;
+            }
+            
+            /* Footer adjustments */
+            .footer-img-grids {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+            
+            .gd-img-ft {
+                margin-bottom: 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1, .hny-title {
+                font-size: 1.6rem !important;
+            }
+            
+            h2 {
+                font-size: 1.4rem !important;
+            }
+            
+            h3 {
+                font-size: 1.2rem !important;
+            }
+            
+            .navbar-brand {
+                font-size: 0.9rem;
+            }
+            
+            .btn-style {
+                padding: 8px 18px;
+                font-size: 0.85rem;
+                width: 100%;
+            }
+            
+            /* Pricing cards full width */
+            .price-main-hny-16 {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            
+            .w3l-pricing-7 {
+                margin-bottom: 25px;
+            }
+            
+            /* Image optimization */
+            .img-fluid {
+                max-height: 300px;
+                object-fit: cover;
+            }
+            
+            /* Content spacing */
+            .py-5 {
+                padding-top: 3rem !important;
+                padding-bottom: 3rem !important;
+            }
+            
+            .py-lg-5 {
+                padding-top: 2rem !important;
+                padding-bottom: 2rem !important;
+            }
+            
+            /* Footer columns stack */
+            .sub-columns > div {
+                margin-bottom: 30px;
+            }
+            
+            .footer-img-grids {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        /* Tablet adjustments */
+        @media (max-width: 992px) and (min-width: 769px) {
+            .w3l-pricing-7, .luxe-grid-info {
+                margin-bottom: 30px;
+            }
+            
+            .navbar-nav .nav-link {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+        }
+        
+        /* Print styles */
+        @media print {
+            .btn-style, .navbar, .footer-inner-main {
+                display: none;
+            }
+            
+            .w3l-pricing-7 {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+        }
+        
+        /* Accessibility improvements */
+        .focus-visible {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+        
+        /* Loading optimization */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        /* Touch-friendly targets */
+        .nav-link, .btn-style {
+            min-height: 44px;
+            min-width: 44px;
+        }
+        
+        /* Text contrast improvements */
+        .text-light {
+            color: #666 !important;
+        }
+        
+        /* Card content spacing */
+        .luxe-grid-info .card-text {
+            flex-grow: 1;
         }
     </style>
 </head>
@@ -242,16 +429,11 @@
 				<h1> <a class="navbar-brand" href="index.html">
 					<span class="sub-logo">B</span>ohl <span class="sub-logo">S</span>quared Massage & Nails Lounge
 					</a></h1>
-				<!-- if logo is image enable this   
-        <a class="navbar-brand" href="#index.html">
-            <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-        </a> -->
 				<button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
 					data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
 					aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
 					<span class="navbar-toggler-icon fa icon-close fa-times"></span>
-					</span>
 				</button>
 
 				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
@@ -270,33 +452,11 @@
 							<a class="nav-link" href="contact.html">Contact</a>
 						</li>
 					</ul>
-					<!--/search-right-->
-					<div class="search-right">
-						<a href="#search" class="hnysearch-icon" title="search"><span class="fa fa-search"
-								aria-hidden="true"></span></a>
-						<!-- search popup -->
-						<div id="search" class="pop-overlay">
-							<div class="popup">
-								<h3 class="hny-title two">Search Here</h3>
-								<form action="#" method="post" class="search-box">
-									<input type="search" placeholder="Search your Keyword" name="search"
-										required="required" autofocus="">
-									<button type="submit" class="btn">Search</button>
-								</form>
-
-							</div>
-							<a class="close" href="#close">×</a>
-						</div>
-						<!-- /search popup -->
-						<a href="#domain" class="domain" data-toggle="modal" data-target="#DomainModal">
-							<div class="hamburger1">
-								<div></div>
-								<div></div>
-								<div></div>
-							</div>
+					<!-- Booking Button for Mobile -->
+					<div class="d-block d-lg-none mt-3">
+						<a href="tel:+27769791311" class="btn btn-primary btn-block">
+							<i class="fas fa-phone-alt mr-2"></i> Call to Book
 						</a>
-
-						<!--//search-right-->
 					</div>
 				</div>
 			</nav>
@@ -318,13 +478,11 @@
 						<h2 class="logo"><a class="logo-brand" href="index.html">
 							<span class="sub-logo">B</span>ohl <span class="sub-logo">S</span>quared Massage & Nails Lounge
 							</a></h2>
-						<!-- if logo is image enable this   
-			<h2 class="logo">
-			  <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-			</h2> -->
-						<p class="mt-md-3 mt-2">Indulge in our rejuvenating treatments, designed to relax your mind and refresh your body. Experience luxury beauty and wellness services in Springs.</p>
+						<p class="mt-md-3 mt-2" style="font-family: var(--poppins);">
+							Indulge in our rejuvenating treatments, designed to relax your mind and refresh your body. Experience luxury beauty and wellness services in Springs.
+						</p>
 						<div class="widget-menu-items mt-sm-5 mt-4">
-							<h5 class="widget-title">Menu Items</h5>
+							<h5 class="widget-title" style="font-family: var(--montserrat);">Menu Items</h5>
 							<nav class="navbar p-0">
 								<ul class="navbar-nav">
 									<li class="nav-item">
@@ -344,30 +502,38 @@
 							</nav>
 						</div>
 						<div class="widget-social-icons mt-sm-5 mt-4">
-							<h5 class="widget-title">Contact Us</h5>
+							<h5 class="widget-title" style="font-family: var(--montserrat);">Contact Us</h5>
 							<ul class="icon-rounded address">
 								<li>
-									<p>28 Heron Cres, Struisbult<br>Springs, 1559, Gauteng</p>
+									<p style="font-family: var(--poppins);">
+										28 Heron Cres, Struisbult<br>Springs, 1559, Gauteng
+									</p>
 								</li>
 								<li class="mt-3">
-									<p><span class="fa fa-phone"></span> <a
-										href="tel:+27769791311">+27 76 979 1311</a></p>
+									<p style="font-family: var(--poppins);">
+										<span class="fa fa-phone"></span> 
+										<a href="tel:+27769791311">+27 76 979 1311</a>
+									</p>
 								</li>
 								<li class="mt-2">
-									<p><span class="fa fa-envelope"></span> <a
-											href="mailto:bohl2nails@gmail.com">bohl2nails@gmail.com</a></p>
+									<p style="font-family: var(--poppins);">
+										<span class="fa fa-envelope"></span> 
+										<a href="mailto:bohl2nails@gmail.com">bohl2nails@gmail.com</a>
+									</p>
 								</li>
 								<li class="top_li1 mt-2">
-									<p><span class="fa fa-clock-o"></span> Mon - Sun 09:00 - 18:00</p>
+									<p style="font-family: var(--poppins);">
+										<span class="fa fa-clock-o"></span> Mon - Sun 09:00 - 18:00
+									</p>
 								</li>
 							</ul>
 						</div>
 						<div class="widget-social-icons mt-sm-5 mt-4">
-							<h5 class="widget-title">Follow Us</h5>
+							<h5 class="widget-title" style="font-family: var(--montserrat);">Follow Us</h5>
 							<ul class="icon-rounded">
-								<li><a class="social-link facebook" href="https://www.facebook.com/Bohl2lounge" target="_blank"><i class="fa fa-facebook"></i></a></li>
-								<li><a class="social-link instagram" href="https://www.instagram.com/bohl2nails_massage" target="_blank"><i class="fa fa-instagram"></i></a></li>
-								<li><a class="social-link whatsapp" href="https://wa.me/27769791311" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+								<li><a class="social-link facebook" href="https://www.facebook.com/Bohl2lounge" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a class="social-link instagram" href="https://www.instagram.com/bohl2nails_massage" target="_blank"><i class="fab fa-instagram"></i></a></li>
+								<li><a class="social-link whatsapp" href="https://wa.me/27769791311" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -378,55 +544,72 @@
 		<!-- //modal-dialog -->
 	</div>
 	<!-- //Domain modal -->
+	
 	<!--/inner-banner-->
 	<div class="inner-banner">
 		<div class="inner-page-infhny">
 		</div>
 	</div>
 	<!--//inner-banner-->
-		<!-- /w3l-content-4 -->
-		<section class="w3l-content-4">
-			<!-- /content-6-section -->
-			<div class="content-4-main py-5">
-				<div class="container py-lg-4">
-					<div class="content-info-in row">
 	
-						<div class="content-right col-lg-6">
-							<img src="assets/images/ab6.jpg" class="img-fluid" alt="Premium nail care services at our Springs salon">
-						</div>
-						<div class="content-left col-lg-6  pl-lg-4">
-							<h6 class="sub-title">
-								Luxury Nail Services Price List
-							</h6>
-							<h3 class="hny-title">
-								Enhance Your Beauty with Our Premium Nail Treatments
-							</h3>
-							<p class="mt-3">Experience the pinnacle of nail care excellence at Bohl Squared Massage and Nails Lounge in Springs. Our comprehensive range of manicure, pedicure, and custom nail art services combines expert craftsmanship with luxury pampering. Using only premium products and the latest techniques, our skilled technicians ensure each treatment enhances both the beauty and health of your nails. Discover our exclusive festive packages designed to give you that perfect holiday glow.</p>
+	<!-- Mobile CTA Banner -->
+	<div class="d-block d-lg-none py-3 text-center" style="background: var(--primary-color);">
+		<div class="container">
+			<a href="tel:+27769791311" class="text-white" style="font-family: var(--montserrat); font-weight: 500;">
+				<i class="fas fa-phone-alt mr-2"></i> Call Now to Book: +27 76 979 1311
+			</a>
+		</div>
+	</div>
 	
-							<div class="content-4-bottom">
-								<div class="content4-right-grids mb-md-0 mb-4">
-	
-									<div class="content4-right-info">
-										<h6><a href="#">Expert Professionals</a></h6>
-										<p>Our certified therapists and nail technicians bring years of experience and ongoing training to deliver exceptional beauty and wellness services.</p>
-									</div>
-	
+	<!-- /w3l-content-4 -->
+	<section class="w3l-content-4">
+		<!-- /content-6-section -->
+		<div class="content-4-main py-5">
+			<div class="container py-lg-4">
+				<div class="content-info-in row">
+					<div class="content-right col-lg-6 order-lg-2">
+						<img src="assets/images/ab6.jpg" class="img-fluid rounded" alt="Premium nail care services at our Springs salon" loading="lazy">
+					</div>
+					<div class="content-left col-lg-6 order-lg-1 pl-lg-4">
+						<h6 class="sub-title" style="font-family: var(--montserrat);">
+							Luxury Nail Services Price List
+						</h6>
+						<h3 class="hny-title" style="font-family: var(--montserrat);">
+							Enhance Your Beauty with Our Premium Nail Treatments
+						</h3>
+						<p class="mt-3" style="font-family: var(--poppins);">
+							Experience the pinnacle of nail care excellence at Bohl Squared Massage and Nails Lounge in Springs. Our comprehensive range of manicure, pedicure, and custom nail art services combines expert craftsmanship with luxury pampering. Using only premium products and the latest techniques, our skilled technicians ensure each treatment enhances both the beauty and health of your nails. Discover our exclusive festive packages designed to give you that perfect holiday glow.
+						</p>
+
+						<div class="content-4-bottom mt-4">
+							<div class="content4-right-grids mb-md-0 mb-4">
+								<div class="content4-right-info">
+									<h6 style="font-family: var(--montserrat);">
+										<a href="#" style="color: var(--secondary-color);">Expert Professionals</a>
+									</h6>
+									<p style="font-family: var(--poppins);">
+										Our certified therapists and nail technicians bring years of experience and ongoing training to deliver exceptional beauty and wellness services.
+									</p>
 								</div>
-								<div class="content4-right-grids mb-md-0 mb-4">
-	
-									<div class="content4-right-info">
-										<h6><a href="#">Premium Natural Products</a></h6>
-										<p>We use only high-quality, natural products that nourish and protect your skin and nails, ensuring a healthier and more luxurious beauty experience.</p>
-									</div>
-	
+							</div>
+							<div class="content4-right-grids mb-md-0 mb-4">
+								<div class="content4-right-info">
+									<h6 style="font-family: var(--montserrat);">
+										<a href="#" style="color: var(--secondary-color);">Premium Natural Products</a>
+									</h6>
+									<p style="font-family: var(--poppins);">
+										We use only high-quality, natural products that nourish and protect your skin and nails, ensuring a healthier and more luxurious beauty experience.
+									</p>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<!-- //content-6-section -->
+		</div>
+	</section>
+	<!-- //content-6-section -->
+	
 	<section class="w3l-progress-6">
 		<!-- /content-6-section -->
 		<div class="progress-6-mian py-5">
@@ -434,30 +617,35 @@
 				<div class="progress-in row">
 					<div class="content-gd col-lg-6">
 						<div class="title-content text-left">
-							<h6 class="sub-title">Our Expertise</h6>
-							<h3 class="hny-title two">5+ Years of Professional Excellence in Beauty & Wellness</h3>
-							<p class="mt-3">With over five years of dedicated service in Springs, Gauteng, Bohl Squared has established itself as a trusted destination for premium beauty and wellness treatments. Our experienced team combines traditional techniques with modern innovations to deliver consistently outstanding results. We take pride in our commitment to continuous improvement and customer satisfaction, ensuring every visit exceeds your expectations.</p>
+							<h6 class="sub-title" style="font-family: var(--montserrat);">Our Expertise</h6>
+							<h3 class="hny-title two" style="font-family: var(--montserrat);">
+								5+ Years of Professional Excellence in Beauty & Wellness
+							</h3>
+							<p class="mt-3" style="font-family: var(--poppins);">
+								With over five years of dedicated service in Springs, Gauteng, Bohl Squared has established itself as a trusted destination for premium beauty and wellness treatments. Our experienced team combines traditional techniques with modern innovations to deliver consistently outstanding results. We take pride in our commitment to continuous improvement and customer satisfaction, ensuring every visit exceeds your expectations.
+							</p>
 						</div>
 					</div>
 					<div class="content-gd col-lg-6 mt-lg-0 mt-4">
-						<div class="progress-info">
-							<h6 class="progress-tittle">Manicure & Pedicure Expertise</h6>
+						<div class="progress-info mb-4">
+							<h6 class="progress-tittle" style="font-family: var(--montserrat);">Manicure & Pedicure Expertise</h6>
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 95%"
 									aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
 								</div>
 							</div>
 						</div>
-						<div class="progress-info">
-							<h6 class="progress-tittle">Therapeutic Massage Treatments</h6>
+						<div class="progress-info mb-4">
+							<h6 class="progress-tittle" style="font-family: var(--montserrat);">Therapeutic Massage Treatments</h6>
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 90%"
 									aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
 								</div>
 							</div>
 						</div>
-						<div class="progress-info">
-							<h6 class="progress-tittle">Beauty Training & Certification
+						<div class="progress-info mb-4">
+							<h6 class="progress-tittle" style="font-family: var(--montserrat);">
+								Beauty Training & Certification
 							</h6>
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 85%"
@@ -465,8 +653,8 @@
 								</div>
 							</div>
 						</div>
-						<div class="progress-info">
-							<h6 class="progress-tittle">Client Satisfaction Rate</h6>
+						<div class="progress-info mb-4">
+							<h6 class="progress-tittle" style="font-family: var(--montserrat);">Client Satisfaction Rate</h6>
 							<div class="progress">
 								<div class="progress-bar progress-bar-striped" role="progressbar" style="width: 98%"
 									aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
@@ -479,198 +667,255 @@
 		</div>
 	</section>
 	<!-- //progress-->
+	
 	<!--/luxe-sec-->
 	<div class="w3-services py-5">
 		<div class="container py-lg-4">
 			<div class="title-content text-center mb-lg-5 mb-4">
-				<h6 class="sub-title">Our Premium Services</h6>
-				<h3 class="hny-title">Signature Beauty & Wellness Treatments</h3>
-				<p>Discover our curated selection of premium services designed to enhance your natural beauty and promote holistic well-being.</p>
-
+				<h6 class="sub-title" style="font-family: var(--montserrat);">Our Premium Services</h6>
+				<h3 class="hny-title" style="font-family: var(--montserrat);">Signature Beauty & Wellness Treatments</h3>
+				<p style="font-family: var(--poppins);">
+					Discover our curated selection of premium services designed to enhance your natural beauty and promote holistic well-being.
+				</p>
 			</div>
 			<div class="row w3-services-grids">
-				<div class="col-lg-4 col-md-6 luxe-grid">
+				<div class="col-lg-4 col-md-6 luxe-grid mb-4">
 					<div class="luxe-grid-info">
-						<a href="#"><img src="assets/images/ab1.jpg" class="img-fuild" alt="Professional beauty training courses in Springs"></a>
-						<a href="#" class="cause-title-wrap">
-							<h4 class="cause-title">Professional Beauty Training</h4>
-						</a>
-						<p class="card-text mb-0">Launch or advance your beauty career with our accredited training programs in Springs. We offer comprehensive courses in nail technology, massage therapy, and spa treatments taught by industry experts. Gain practical skills, professional certification, and the confidence to excel in South Africa's beauty industry.</p>
-						<a href="contact.html" class="btn btn-style btn-primary mt-4">Enquire About Training</a>
+						<a href="#"><img src="assets/images/ab1.jpg" class="img-fluid" alt="Professional beauty training courses in Springs" loading="lazy"></a>
+						<div class="p-4">
+							<a href="#" class="cause-title-wrap">
+								<h4 class="cause-title" style="font-family: var(--montserrat);">Professional Beauty Training</h4>
+							</a>
+							<p class="card-text mb-0" style="font-family: var(--poppins);">
+								Launch or advance your beauty career with our accredited training programs in Springs. We offer comprehensive courses in nail technology, massage therapy, and spa treatments taught by industry experts. Gain practical skills, professional certification, and the confidence to excel in South Africa's beauty industry.
+							</p>
+							<a href="contact.html" class="btn btn-style btn-primary mt-4">Enquire About Training</a>
+						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 luxe-grid">
+				<div class="col-lg-4 col-md-6 luxe-grid mb-4">
 					<div class="luxe-grid-info">
-						<a href="#"><img src="assets/images/ab2.jpg" class="img-fuild" alt="Luxury spa pedicure treatment"></a>
-						<a href="#" class="cause-title-wrap">
-							<h4 class="cause-title">Luxury Spa Pedicure</h4>
-						</a>
-						<p class="card-text mb-0">Experience ultimate foot pampering with our signature spa pedicure. This indulgent treatment includes thorough cleansing, exfoliation, nail care, and massage using premium products. Perfect for tired feet or as regular maintenance, our pedicures leave your feet soft, smooth, and beautifully groomed.</p>
-						<a href="contact.html" class="btn btn-style btn-primary mt-4">Book Pedicure</a>
+						<a href="#"><img src="assets/images/ab2.jpg" class="img-fluid" alt="Luxury spa pedicure treatment" loading="lazy"></a>
+						<div class="p-4">
+							<a href="#" class="cause-title-wrap">
+								<h4 class="cause-title" style="font-family: var(--montserrat);">Luxury Spa Pedicure</h4>
+							</a>
+							<p class="card-text mb-0" style="font-family: var(--poppins);">
+								Experience ultimate foot pampering with our signature spa pedicure. This indulgent treatment includes thorough cleansing, exfoliation, nail care, and massage using premium products. Perfect for tired feet or as regular maintenance, our pedicures leave your feet soft, smooth, and beautifully groomed.
+							</p>
+							<a href="contact.html" class="btn btn-style btn-primary mt-4">Book Pedicure</a>
+						</div>
 					</div>
 				</div>
-				<div class="col-lg-4 col-md-6 luxe-grid">
+				<div class="col-lg-4 col-md-6 luxe-grid mb-4">
 					<div class="luxe-grid-info">
-						<a href="#"><img src="assets/images/ab3.jpg" class="img-fuild" alt="Professional facial and skincare treatments"></a>
-						<a href="#" class="cause-title-wrap">
-							<h4 class="cause-title">Revitalizing Facial Treatments</h4>
-						</a>
-						<p class="card-text mb-0">Transform your complexion with our expert facial treatments in Springs. Each personalized session includes deep cleansing, exfoliation, extraction, massage, and hydration using premium skincare products. Designed to address specific skin concerns and promote a radiant, youthful glow for all skin types.</p>
-						<a href="contact.html" class="btn btn-style btn-primary mt-4">Book Facial</a>
+						<a href="#"><img src="assets/images/ab3.jpg" class="img-fluid" alt="Professional facial and skincare treatments" loading="lazy"></a>
+						<div class="p-4">
+							<a href="#" class="cause-title-wrap">
+								<h4 class="cause-title" style="font-family: var(--montserrat);">Revitalizing Facial Treatments</h4>
+							</a>
+							<p class="card-text mb-0" style="font-family: var(--poppins);">
+								Transform your complexion with our expert facial treatments in Springs. Each personalized session includes deep cleansing, exfoliation, extraction, massage, and hydration using premium skincare products. Designed to address specific skin concerns and promote a radiant, youthful glow for all skin types.
+							</p>
+							<a href="contact.html" class="btn btn-style btn-primary mt-4">Book Facial</a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!--/luxe-sec-->
+	
 	<!-- /w3l-content-grids-->
 	<section class="w3l-index2">
 		<div class="row abouthy-img-grids no-gutters">
-			<div class="col-md-6 img-one">
-				<img src="assets/images/ab.jpg" alt="Luxury manicure service with gel polish application" class="img-fluid">
+			<div class="col-lg-6 img-one order-lg-1">
+				<img src="assets/images/ab.jpg" alt="Luxury manicure service with gel polish application" class="img-fluid h-100" loading="lazy" style="object-fit: cover;">
 			</div>
-			<div class="col-md-6 img-one content-mid py-md-0 py-5">
-				<div class="info">
-					<h3 class="hny-title two">
+			<div class="col-lg-6 img-one content-mid py-md-0 py-5 order-lg-2">
+				<div class="info p-4 p-lg-5">
+					<h3 class="hny-title two" style="font-family: var(--montserrat);">
 						Premium Manicure Services
 					</h3>
-					<p class="mt-3 mb-5 pr-lg-4">Indulge in our comprehensive manicure services that go beyond basic nail care. We offer everything from classic grooming to luxurious treatments featuring gel polish, nail strengthening, and intricate nail art. Our skilled technicians use premium products and precise techniques to ensure your hands not only look stunning but also receive proper care and attention. Each session includes cuticle care, shaping, moisturizing massage, and your choice of polish or treatment, leaving your hands refreshed and beautifully groomed.</p>
+					<p class="mt-3 mb-4" style="font-family: var(--poppins);">
+						Indulge in our comprehensive manicure services that go beyond basic nail care. We offer everything from classic grooming to luxurious treatments featuring gel polish, nail strengthening, and intricate nail art. Our skilled technicians use premium products and precise techniques to ensure your hands not only look stunning but also receive proper care and attention. Each session includes cuticle care, shaping, moisturizing massage, and your choice of polish or treatment, leaving your hands refreshed and beautifully groomed.
+					</p>
 					<div class="ready-more">
 						<a class="btn btn-style btn-primary" href="contact.html">Book Manicure</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 img-info content-mid py-md-0 py-5">
-				<div class="info">
-					<h3 class="hny-title two">
+			<div class="col-lg-6 img-info content-mid py-md-0 py-5 order-lg-3 order-4">
+				<div class="info p-4 p-lg-5">
+					<h3 class="hny-title two" style="font-family: var(--montserrat);">
 						Accredited Beauty Training
 					</h3>
-					<p class="mt-3 mb-5 pr-lg-4">Transform your passion for beauty into a rewarding career with our comprehensive training programs. Our accredited courses cover nail technology, therapeutic massage, and spa treatments, combining theoretical knowledge with hands-on practical experience. Under the guidance of industry professionals, you'll master the latest techniques and best practices. Upon completion, receive a recognized certificate that validates your skills and opens doors to opportunities in Gauteng's thriving beauty industry.</p>
+					<p class="mt-3 mb-4" style="font-family: var(--poppins);">
+						Transform your passion for beauty into a rewarding career with our comprehensive training programs. Our accredited courses cover nail technology, therapeutic massage, and spa treatments, combining theoretical knowledge with hands-on practical experience. Under the guidance of industry professionals, you'll master the latest techniques and best practices. Upon completion, receive a recognized certificate that validates your skills and opens doors to opportunities in Gauteng's thriving beauty industry.
+					</p>
 					<div class="ready-more">
 						<a class="btn btn-style btn-primary" href="contact.html">Enquire About Courses</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6 img-one">
-				<img src="assets/images/ab1.jpg" alt="Students learning beauty techniques in training course" class="img-fluid">
+			<div class="col-lg-6 img-one order-lg-4 order-3">
+				<img src="assets/images/ab1.jpg" alt="Students learning beauty techniques in training course" class="img-fluid h-100" loading="lazy" style="object-fit: cover;">
 			</div>
 		</div>
 	</section>
 	<!-- /w3l-content-grids-->
+	
 	<!--pricing-16-->
 	<section class="w3l-pricing-16-main">
 		<div class="pricing-content py-5">
 			<div class="container py-lg-4">
 				<div class="title-content text-center mb-lg-5 mt-4">
-					<h6 class="sub-title">Exclusive Packages</h6>
-					<h3 class="hny-title">Premium Service Packages</h3>
-					<p class="mt-3">Choose from our curated selection of luxury packages designed for ultimate relaxation and pampering.</p>
+					<h6 class="sub-title" style="font-family: var(--montserrat);">Exclusive Packages</h6>
+					<h3 class="hny-title" style="font-family: var(--montserrat);">Premium Service Packages</h3>
+					<p class="mt-3" style="font-family: var(--poppins);">
+						Choose from our curated selection of luxury packages designed for ultimate relaxation and pampering.
+					</p>
 				</div>
 
 				<div class="row w3l-pricing-7-gd-top pt-4">
-					<div class="col-lg-4 col-md-6 price-main-hny-16 mt-lg-0 mt-5">
-						<div class="w3l-pricing-7-gd-left">
-							<div class="w3l-pricing-7  pric-7-1">
-								<div class="w3l-pricing-7-top">
-									<h6>Signature Relaxation Package</h6>
-									<h3 class="title-sub">From <label>ZAR</label>350 <span>Prices May Vary</span></h3>
+					<div class="col-lg-4 col-md-6 price-main-hny-16 mt-lg-0 mt-4">
+						<div class="w3l-pricing-7-gd-left h-100">
+							<div class="w3l-pricing-7 pric-7-1 h-100">
+								<div class="w3l-pricing-7-top p-4">
+									<h6 style="font-family: var(--montserrat);">Signature Relaxation Package</h6>
+									<h3 class="title-sub" style="font-family: var(--montserrat);">
+										From <label>ZAR</label>350 <span style="font-family: var(--poppins); font-size: 0.9rem;">Prices May Vary</span>
+									</h3>
 								</div>
 								<div class="w3l-pricing-7-bottom">
-									<div class="w3l-pricing-7-bottom-bottom">
+									<div class="w3l-pricing-7-bottom-bottom p-4">
 										<ul class="links">
 											<li class="tick-info">
-												<span class="pricing-val">60-Minute Therapeutic Body Massage</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													60-Minute Therapeutic Body Massage
+												</span>
 											</li>
 											<li class="tick-info">
-												<span class="pricing-val">Hot Stone Therapy Session</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													Hot Stone Therapy Session
+												</span>
 											</li>
 											<li class="tick-info">
-												<span class="pricing-val">Luxury Spa Pedicure</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													Luxury Spa Pedicure
+												</span>
 											</li>
 											<li class="tick-info">
-												<span class="pricing-val">Complimentary Refreshments & Snacks</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													Complimentary Refreshments & Snacks
+												</span>
 											</li>
 											<li class="tick-info">
-												<span class="pricing-val">Soothing Foot Massage</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													Soothing Foot Massage
+												</span>
 											</li>
 										</ul>
 									</div>
-									<div class="buy-button text-center">
+									<div class="buy-button text-center p-4">
 										<div class="read">
-											<a href="contact.html" class="btn btn-style btn-primary mt-4">Book Now</a>
+											<a href="contact.html" class="btn btn-style btn-primary">Book Now</a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 price-main-hny-16 mt-lg-0 mt-5">
-						<div class="w3l-pricing-7-gd-left active">
-							<div class="w3l-pricing-7  pric-7-1">
-								<div class="w3l-pricing-7-top">
-									<h6>Festive Luxury Package</h6>
-									<h3 class="title-sub">ZAR 550 <span>Limited Time Offer</span></h3>
-
+					<div class="col-lg-4 col-md-6 price-main-hny-16 mt-lg-0 mt-4">
+						<div class="w3l-pricing-7-gd-left active h-100">
+							<div class="w3l-pricing-7 pric-7-1 h-100">
+								<div class="w3l-pricing-7-top p-4">
+									<h6 style="font-family: var(--montserrat);">Festive Luxury Package</h6>
+									<h3 class="title-sub" style="font-family: var(--montserrat);">
+										ZAR 550 <span style="font-family: var(--poppins); font-size: 0.9rem;">Limited Time Offer</span>
+									</h3>
 								</div>
 								<div class="w3l-pricing-7-bottom">
-									<div class="w3l-pricing-7-bottom-bottom">
+									<div class="w3l-pricing-7-bottom-bottom p-4">
 										<ul class="links">
 											<li class="tick-info">
-												<span class="pricing-val">Complimentary Spa Gown & Slippers</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													Complimentary Spa Gown & Slippers
+												</span>
 											</li>
 											<li class="tick-info">
-												<span class="pricing-val">Premium Beverages & Gourmet Snacks</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													Premium Beverages & Gourmet Snacks
+												</span>
 											</li>
 											<li class="tick-info">
-												<span class="pricing-val">40-Minute Luxury Pedicure</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													40-Minute Luxury Pedicure
+												</span>
 											</li>
 											<li class="tick-info">
-												<span class="pricing-val">40-Minute Hot Stone Treatment</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													40-Minute Hot Stone Treatment
+												</span>
 											</li>
 											<li class="tick-info">
-												<span class="pricing-val">Exfoliating Body Scrub</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													Exfoliating Body Scrub
+												</span>
 											</li>
 										</ul>
 									</div>
-									<div class="buy-button text-center">
+									<div class="buy-button text-center p-4">
 										<div class="read">
-											<a href="contact.html" class="btn btn-style btn-primary  mt-4">Book Package</a>
+											<a href="contact.html" class="btn btn-style btn-primary">Book Package</a>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-6 price-main-hny-16 mt-lg-0 mt-5">
-						<div class="w3l-pricing-7-gd-left">
-							<div class="w3l-pricing-7 pric-7-1">
-								<div class="w3l-pricing-7-top">
-									<h6>Couples Retreat Package</h6>
-									<h3 class="title-sub">From <label>ZAR</label>980 <span>Perfect for Two</span></h3>
+					<div class="col-lg-4 col-md-6 price-main-hny-16 mt-lg-0 mt-4">
+						<div class="w3l-pricing-7-gd-left h-100">
+							<div class="w3l-pricing-7 pric-7-1 h-100">
+								<div class="w3l-pricing-7-top p-4">
+									<h6 style="font-family: var(--montserrat);">Couples Retreat Package</h6>
+									<h3 class="title-sub" style="font-family: var(--montserrat);">
+										From <label>ZAR</label>980 <span style="font-family: var(--poppins); font-size: 0.9rem;">Perfect for Two</span>
+									</h3>
 								</div>
 								<div class="w3l-pricing-7-bottom">
-									<div class="w3l-pricing-7-bottom-bottom">
+									<div class="w3l-pricing-7-bottom-bottom p-4">
 										<ul class="links">
 											<li class="tick-info">
-												<span class="pricing-val">Dual Treatment Sessions</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													Dual Treatment Sessions
+												</span>
 											</li>
 											<li class="tick-info">
-												<span class="pricing-val">Premium Couples Service</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													Premium Couples Service
+												</span>
 											</li>
 											<li class="tick-info">
-												<span class="pricing-val">Full Body Exfoliation</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													Full Body Exfoliation
+												</span>
 											</li>
 											<li class="tick-info">
-												<span class="pricing-val">Paraffin Wax Treatment</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													Paraffin Wax Treatment
+												</span>
 											</li>
 											<li class="tick-info">
-												<span class="pricing-val">40-Minute Synchronized Services</span>
+												<span class="pricing-val" style="font-family: var(--poppins);">
+													40-Minute Synchronized Services
+												</span>
 											</li>
 										</ul>
 									</div>
-									<div class="buy-button text-center">
+									<div class="buy-button text-center p-4">
 										<div class="read">
-											<a href="contact.html" class="btn btn-style btn-primary mt-4">Book Couples</a>
+											<a href="contact.html" class="btn btn-style btn-primary">Book Couples</a>
 										</div>
 									</div>
 								</div>
@@ -679,13 +924,31 @@
 					</div>
 				</div>
 				<div class="text-center mt-5">
-					<p class="mb-3">Looking for a custom package? <a href="contact.html" class="text-primary font-weight-bold">Contact us</a> to create your personalized spa experience.</p>
+					<p class="mb-3" style="font-family: var(--poppins);">
+						Looking for a custom package? 
+						<a href="contact.html" class="text-primary font-weight-bold" style="font-family: var(--montserrat);">
+							Contact us
+						</a> to create your personalized spa experience.
+					</p>
 				</div>
 			</div>
 		</div>
-		</div>
 	</section>
 	<!-- //pricing-16 -->
+	
+	<!-- Mobile Booking CTA -->
+	<div class="d-block d-lg-none py-4 text-center" style="background: linear-gradient(135deg, var(--primary-color), var(--accent-color));">
+		<div class="container">
+			<h4 class="text-white mb-3" style="font-family: var(--montserrat);">Ready to Book?</h4>
+			<a href="tel:+27769791311" class="btn btn-light btn-lg mb-2" style="font-family: var(--montserrat);">
+				<i class="fas fa-phone-alt mr-2"></i> Call Now
+			</a>
+			<a href="https://wa.me/27769791311" class="btn btn-success btn-lg mb-2" style="font-family: var(--montserrat);">
+				<i class="fab fa-whatsapp mr-2"></i> WhatsApp
+			</a>
+		</div>
+	</div>
+
 	<!-- footer-66 -->
 	<footer class="w3l-footer-66">
 		<section class="footer-inner-main">
@@ -694,119 +957,88 @@
 					<div class="text-txt">
 						<div class="right-side">
 							<div class="row sub-columns">
-								<div class="col-lg-4 col-md-6 sub-one-left pr-lg-4">
-									<h3 class="hny-title two mb-3">About Our Springs Spa</h3>
-									<!-- if logo is image enable this   
-										<a class="navbar-brand" href="#index.html">
-											<img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
-										</a> -->
-									<p class="pr-lg-5">Bohl Squared Massage and Nails Lounge is Springs' premier destination for luxury beauty and wellness. We specialize in therapeutic massage, premium nail care, professional training, and holistic spa treatments designed to rejuvenate both body and mind.</p>
-									<div class="columns-2">
+								<div class="col-lg-4 col-md-6 sub-one-left pr-lg-4 mb-4">
+									<h3 class="hny-title two mb-3" style="font-family: var(--montserrat);">About Our Springs Spa</h3>
+									<p class="pr-lg-5" style="font-family: var(--poppins);">
+										Bohl Squared Massage and Nails Lounge is Springs' premier destination for luxury beauty and wellness. We specialize in therapeutic massage, premium nail care, professional training, and holistic spa treatments designed to rejuvenate both body and mind.
+									</p>
+									<div class="columns-2 mt-4">
 										<ul class="social">
-											<li><a href="https://www.facebook.com/Bohl2lounge" target="_blank" rel="noopener noreferrer"><span class="fa fa-facebook" aria-hidden="true"></span></a></li>
-											<li><a href="https://wa.me/27769791311" target="_blank" rel="noopener noreferrer"><span class="fa fa-whatsapp"
-												aria-hidden="true"></span></a>
-											</li>
-											<li>
-                                            <a href="https://www.instagram.com/bohl2nails_massage" target="_blank" rel="noopener noreferrer">
-                                           <span class="fa fa-instagram" aria-hidden="true"></span>
-                                           </a>
-                                    </li>
-
-											<li><a href="mailto:bohl2nails@gmail.com"><span class="fa fa-envelope"
-														aria-hidden="true"></span></a>
-											</li>
-
+											<li><a href="https://www.facebook.com/Bohl2lounge" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><span class="fab fa-facebook-f" aria-hidden="true"></span></a></li>
+											<li><a href="https://wa.me/27769791311" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><span class="fab fa-whatsapp" aria-hidden="true"></span></a></li>
+											<li><a href="https://www.instagram.com/bohl2nails_massage" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><span class="fab fa-instagram" aria-hidden="true"></span></a></li>
+											<li><a href="mailto:bohl2nails@gmail.com" aria-label="Email"><span class="fas fa-envelope" aria-hidden="true"></span></a></li>
 										</ul>
 									</div>
 								</div>
-								<div class="col-lg-5 col-md-6 sub-one-left mid-footer-gd">
-									<div class="sub-two-right">
-										<h6>Quick Links</h6>
-										<ul>
-											<li><a href="index.html"><span
-														class="fa fa-angle-double-right mr-2"></span>Home</a>
-											</li>
-											<li><a href="about.html"><span
-														class="fa fa-angle-double-right mr-2"></span>About Us</a>
-											</li>
-											<li><a href="services.html"><span
-														class="fa fa-angle-double-right mr-2"></span>Services & Pricing</a></li>
-											<li><a href="contact.html"><span
-														class="fa fa-angle-double-right mr-2"></span>Contact & Location</a></li>
-										</ul>
-									</div>
-									<div class="sub-two-right">
-										<h6>Our Signature Therapies</h6>
-										<ul>
-											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Deep Tissue Massage</a>
-											</li>
-											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Body Scrub Therapy</a>
-											</li>
-											<li><a href="#"><span
-														class="fa fa-angle-double-right mr-2"></span>Hot Stone Therapy</a>
-											</li>
-											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Aroma Therapy</a>
-											</li>
-										</ul>
-									</div>
-									<div class="sub-two-right">
-										<h6>Service Categories</h6>
-										<ul>
-											<li><a href="#"><span class="fa fa-angle-double-right mr-2"></span>Nail Care & Art</a></li>
-											<li><a href="#"><span
-														class="fa fa-angle-double-right mr-2"></span>Professional Waxing</a>
-											</li>
-											<li><a href="#support"><span
-														class="fa fa-angle-double-right mr-2"></span>Therapeutic Massage</a>
-											</li>
-											<li><a href="#terms"><span class="fa fa-angle-double-right mr-2"></span>Beauty Training</a>
-											</li>
-										</ul>
+								<div class="col-lg-5 col-md-6 sub-one-left mid-footer-gd mb-4">
+									<div class="row">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h6 style="font-family: var(--montserrat);">Quick Links</h6>
+											<ul>
+												<li><a href="index.html" style="font-family: var(--poppins);"><span class="fas fa-angle-double-right mr-2"></span>Home</a></li>
+												<li><a href="about.html" style="font-family: var(--poppins);"><span class="fas fa-angle-double-right mr-2"></span>About Us</a></li>
+												<li><a href="services.html" style="font-family: var(--poppins);"><span class="fas fa-angle-double-right mr-2"></span>Services & Pricing</a></li>
+												<li><a href="contact.html" style="font-family: var(--poppins);"><span class="fas fa-angle-double-right mr-2"></span>Contact & Location</a></li>
+											</ul>
+										</div>
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h6 style="font-family: var(--montserrat);">Our Services</h6>
+											<ul>
+												<li><a href="#" style="font-family: var(--poppins);"><span class="fas fa-angle-double-right mr-2"></span>Deep Tissue Massage</a></li>
+												<li><a href="#" style="font-family: var(--poppins);"><span class="fas fa-angle-double-right mr-2"></span>Body Scrub Therapy</a></li>
+												<li><a href="#" style="font-family: var(--poppins);"><span class="fas fa-angle-double-right mr-2"></span>Hot Stone Therapy</a></li>
+												<li><a href="#" style="font-family: var(--poppins);"><span class="fas fa-angle-double-right mr-2"></span>Aroma Therapy</a></li>
+											</ul>
+										</div>
+										<div class="col-sm-4">
+											<h6 style="font-family: var(--montserrat);">Categories</h6>
+											<ul>
+												<li><a href="#" style="font-family: var(--poppins);"><span class="fas fa-angle-double-right mr-2"></span>Nail Care & Art</a></li>
+												<li><a href="#" style="font-family: var(--poppins);"><span class="fas fa-angle-double-right mr-2"></span>Professional Waxing</a></li>
+												<li><a href="#" style="font-family: var(--poppins);"><span class="fas fa-angle-double-right mr-2"></span>Therapeutic Massage</a></li>
+												<li><a href="#" style="font-family: var(--poppins);"><span class="fas fa-angle-double-right mr-2"></span>Beauty Training</a></li>
+											</ul>
+										</div>
 									</div>
 								</div>
-								<div class="col-lg-3 col-md-6 sub-one-left">
-									<h6><a href="https://www.facebook.com/Bohl2lounge" target="_blank" rel="noopener noreferrer">
-                                    Visit Us on Facebook
-                                </a></h6>
+								<div class="col-lg-3 col-md-12 sub-one-left">
+									<h6 style="font-family: var(--montserrat);">
+										<a href="https://www.facebook.com/Bohl2lounge" target="_blank" rel="noopener noreferrer">
+											Visit Us on Facebook
+										</a>
+									</h6>
 									<div class="footer-img-grids">
 										<div class="gd-img-ft">
-											<a class="" href="#">
-												<img class="rounded img-fluid img-responsive" src="assets/images/ab.jpg"
-													alt="Manicure service image">
+											<a href="#">
+												<img class="rounded img-fluid img-responsive" src="assets/images/ab.jpg" alt="Manicure service image" loading="lazy">
 											</a>
 										</div>
 										<div class="gd-img-ft">
-											<a class="" href="#">
-												<img class="rounded img-fluid img-responsive"
-													src="assets/images/ab1.jpg" alt="Training session image">
+											<a href="#">
+												<img class="rounded img-fluid img-responsive" src="assets/images/ab1.jpg" alt="Training session image" loading="lazy">
 											</a>
 										</div>
 										<div class="gd-img-ft">
-											<a class="" href="#">
-												<img class="rounded img-fluid img-responsive"
-													src="assets/images/ab2.jpg" alt="Pedicure treatment image">
+											<a href="#">
+												<img class="rounded img-fluid img-responsive" src="assets/images/ab2.jpg" alt="Pedicure treatment image" loading="lazy">
 											</a>
 										</div>
 										<div class="gd-img-ft">
-											<a class="" href="#">
-												<img class="rounded img-fluid img-responsive"
-													src="assets/images/ab3.jpg" alt="Facial treatment image">
+											<a href="#">
+												<img class="rounded img-fluid img-responsive" src="assets/images/ab3.jpg" alt="Facial treatment image" loading="lazy">
 											</a>
 										</div>
 										<div class="gd-img-ft">
-											<a class="" href="#">
-												<img class="rounded img-fluid img-responsive"
-													src="assets/images/ab4.jpg" alt="Spa package image">
+											<a href="#">
+												<img class="rounded img-fluid img-responsive" src="assets/images/ab4.jpg" alt="Spa package image" loading="lazy">
 											</a>
 										</div>
 										<div class="gd-img-ft">
-											<a class="" href="#">
-												<img class="rounded img-fluid img-responsive"
-													src="assets/images/ab5.jpg" alt="Refreshments image">
+											<a href="#">
+												<img class="rounded img-fluid img-responsive" src="assets/images/ab5.jpg" alt="Refreshments image" loading="lazy">
 											</a>
 										</div>
-
 									</div>
 								</div>
 							</div>
@@ -817,24 +1049,22 @@
 			<div class="below-section">
 				<div class="container">
 					<div class="copyright-footer">
-						<div class="columns text-lg-left">
-							<p>&copy; 2026 Bohl Squared Massage & Nails Lounge. All rights reserved. | Springs, Gauteng</p>
+						<div class="columns text-lg-left mb-3 mb-lg-0">
+							<p style="font-family: var(--poppins);">
+								&copy; 2026 Bohl Squared Massage & Nails Lounge. All rights reserved. | Springs, Gauteng
+							</p>
 						</div>
-						<ul class="columns text-lg-right">
-							<li><a href="#">Privacy Policy</a>
-							</li>
-							<li><a href="about.html">About Us</a>
-							</li>
-							<li><a href="contact.html">Contact Us</a>
-							</li>
+						<ul class="columns text-lg-right" style="font-family: var(--poppins);">
+							<li><a href="#">Privacy Policy</a></li>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="contact.html">Contact Us</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
-			<!-- copyright -->
 			<!-- move top -->
 			<button onclick="topFunction()" id="movetop" title="Go to top">
-				<span class="fa fa-arrow-up" aria-hidden="true"></span>
+				<span class="fas fa-arrow-up" aria-hidden="true"></span>
 			</button>
 		</section>
 	</footer>
@@ -930,6 +1160,9 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+// Add touch event for better mobile UX
+document.addEventListener('touchstart', function() {}, {passive: true});
 </script>
 
 </body>
